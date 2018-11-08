@@ -152,14 +152,6 @@ Persistence storage
 For simplicity's sake in this assessment I used a HashMap, however it’s not a good solution since it’s not scalable nor durable.
 In production I’d rather use some SQL or no-SQL database
 
-Concurrency:
-In this assessment I used Akka framework. Since intrinsically Actor model is a synchronizer, meaning it can be used as a
-synchronization primitive and since it’s Actor is Thread safe we don’t need extra synchronization  logic.
-However, in this assessment I used single instance of Actor per multiple request, thus if we use Actor per request then
-we need to reconsider our design. For instance we can use bucket level locking, document level locking in document
-database or some transaction mechanism (ACID)
-
-
 
 HOW TO run and use
 
